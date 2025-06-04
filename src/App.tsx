@@ -41,14 +41,7 @@ function App() {
             </div>
         </div>
 
-        <button type="button" 
-        className="add-game-btn" 
-        onClick={close} 
-        title="openModal()"
-        aria-label="open modal"
-        >
-          Ajouter un jeu
-        </button>
+        <button className="add-game-btn" onClick="openModal()">+ Ajouter un jeu</button>
 
         <div className="games-grid" id="gamesGrid">
             {/* <!-- Les jeux seront affichés ici --> */}
@@ -58,7 +51,7 @@ function App() {
         <div id="gameModal" className="modal">
             <div className="modal-content">
                 <h2 id="modalTitle">Ajouter un jeu</h2>
-                <form id="gamehtmlForm">
+                <htmlForm id="gamehtmlForm">
                     <div className="htmlForm-group">
                         <label htmlFor="gameName">Nom du jeu:</label>
                         <input type="text" id="gameName" required />
@@ -85,7 +78,7 @@ function App() {
                         <label htmlFor="gameDescription">Description:</label>
                         <textarea id="gameDescription" placeholder="Description du jeu..."></textarea>
                     </div>
-                </form>
+                </htmlForm>
                 <div className="modal-actions">
                     <button type="button" className="btn-primary" onClick="saveGame()">Enregistrer</button>
                     <button type="button" className="btn-secondary" onClick="closeModal()">Annuler</button>
